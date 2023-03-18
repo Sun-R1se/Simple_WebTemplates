@@ -1,0 +1,406 @@
+/* -- Reset --*/
+html {
+	box-sizing: border-box;
+	height: 100vh;
+	font-family: 'Helvetica';
+	scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+/* -- Global Styles -- */
+body {
+	background-color: #FAFAFA;
+}
+
+body::-webkit-scrollbar {
+	width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+	background: #1F1EFB;
+}
+
+body::-webkit-scrollbar-thumb {
+	background-color: #0A0AFA;
+	border-radius: 20px;
+	border: 3px solid #0D2175;
+}
+
+@media (max-width: 1200px) {
+	.header-nav {
+		max-width: 970px;
+	}
+}
+
+@media (max-width: 992px) {
+	.header-nav {
+		max-width: 750px;
+	}
+	.top-nav a.nav-button {
+		display: none;
+	}
+	.top-nav a.menu-button {
+		display: block;
+	}
+}
+
+@media (max-width: 768px) {
+	.header-nav {
+		max-width: 526px;
+	}
+	.menu-button {
+		max-width: 100px;
+	}
+	.title {
+		max-width: 280px
+	}
+}
+
+@media (max-width: 566px) {
+	.header-nav {
+		max-width: 320px;
+		flex-direction: column;
+		gap: 0;
+		flex-grow: 1;
+		justify-content: center;
+		align-items: center;
+	}
+	.title {
+		margin-top: 15px;
+	}
+	.menu-button {
+		margin-bottom: 15px;
+		max-width: 200px;
+	}
+	.header {
+		min-height: 140px;
+	}
+	.footer {
+		min-height: 100px;
+	}
+	.control-button {
+		margin: 5px 0 5px 0;
+	}
+}
+
+/* -- Styles -- */
+/* - Header - */
+.header {
+	width: 100%;
+	height: 80px;
+	border-bottom: 5px solid #0D2175;
+	background-color: #1F1EFB;
+
+	margin-bottom: 30px;
+	
+	display: flex;
+	justify-content: center;
+}
+
+.header-nav {
+	height: 100%;
+	width: 1140px;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+/* Title */
+.title {
+	width: 380px;
+
+	transition: 0.2s all;
+}
+
+.title:hover {
+	transform: scale(1.2);
+	text-shadow: 0 0 10px #FAFAFA;
+}
+
+.title a {
+	font-family: 'Source Code Pro', monospace;
+	text-decoration: none;
+	font-size: 25px;
+	color: #FAFAFA;
+}
+
+/* Menu */
+.top-nav {
+	display: flex;
+	align-items: center;
+}
+
+.nav-button {
+	color: #FAFAFA;
+	font-family: 'Source Code Pro', monospace;
+	font-size: 18px;
+	text-decoration: none;
+	transition: 0.2s;
+	display: block;
+	text-align: center;
+}
+
+.nav-button + .nav-button {
+	margin-left: 30px;
+}
+
+.nav-button:hover {
+	text-shadow: 0 0 10px #FAFAFA;
+}
+
+.menu-button {
+	width: 200px;
+
+	background-color: #0A0AFA;
+	color: #FAFAFA;
+	font-family: 'Ubuntu', sans-serif;
+
+	border: 2px solid #FAFAFA;
+	border-radius: 15px;
+
+	transition: 0.2s all;
+
+	display: none;
+}
+
+.menu-button:hover {
+	background-color: #FAFAFA !important;
+	color: #1F1EFB !important;
+
+	border: 2px solid #FAFAFA !important;
+	border-radius: 15px !important;
+
+	outline: none !important;
+	box-shadow: none !important;
+}
+
+.menu-button:focus,
+.menu-button:active {
+	background-color: #0A0AFA !important;
+	color: #FAFAFA !important;
+
+	border: 2px solid #FAFAFA !important;
+	border-radius: 15px !important;
+
+	outline: none !important;
+	box-shadow: none !important;
+}
+
+.dropdown-menu {
+	width: 200px;
+
+	background-color: #1F1EFB;
+	border: 1px solid #FAFAFA;
+}
+
+.dropdown-item {
+	font-family: 'Ubuntu', sans-serif;
+	color: #FAFAFA;
+	text-align: center;
+}
+
+.dropdown-item:hover {
+	background-color: #0A0AFA;
+
+	color: #FAFAFA;
+}
+
+.dropdown-divider {
+	border: none;
+	border-bottom: 1px solid #FAFAFA;
+}
+
+/* - Main - */
+.main {
+	min-height: calc(100vh - 160px);
+
+	display: flex;
+	justify-content: center;
+}
+
+.wraper {
+	width: 1140px;
+	
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 30px;
+}
+
+.output {
+	width: 100%;
+	height: auto;
+
+	border: 3px solid #0D2175;
+	border-radius: 5px;
+}
+
+.slider::-webkit-slider-thumb, .slider::-webkit-slider-thumb:active {
+	background: #0D2175 !important;
+	cursor: pointer;
+	outline: 1px solid #fafafa !important;
+	border: none !important;
+}
+
+.slider::-webkit-slider-thumb:focus, .slider::-webkit-slider-thumb:focus-visible {
+	border: none !important;
+	outline: 1px solid #fafafa !important;
+}
+
+.controls {
+	width: 100%;
+	background-color: #1F1EFB;
+	border: 3px solid #0D2175;
+	border-radius: 20px;
+	padding: 30px;
+
+	font-family: 'Source Code Pro', monospace;
+	color: #FAFAFA;
+	text-align: center;
+	font-size: 25px;
+}
+
+.mg-b {
+	margin-bottom: 20px;
+}
+
+.style-button {
+	width: 100px;
+	height: 38px;
+	border: 1px solid #FAFAFA;
+	border-radius: 20px;
+
+	font-family: "Nunito", sans-serif;
+	font-size: 18px;
+	color: #F7ECAD;
+
+	transition: 0.2s all;
+}
+
+.style-button:hover {
+	box-shadow: 0 0 30px 3px #FAFAFA;
+}
+
+.active {
+	border: 3px solid #FAFAFA !important;
+}
+
+.red {
+	background-color: #DC3545;
+}
+
+.green {
+	background-color: #198754;
+}
+
+.blue {
+	background-color: #0D6EFD;
+}
+
+.yellow {
+	background-color: #FFC107;
+	color: #000 !important;
+}
+
+.total {
+	width: 100%;
+	background-color: #1F1EFB;
+	border: 3px solid #0D2175;
+	border-radius: 20px;
+	padding: 30px;
+
+	text-align: center;
+}
+
+.total h2 {
+	font-family: 'Source Code Pro', monospace;
+	font-size: 30px;
+	font-weight: 600;
+
+	color: #FAFAFA;
+}
+
+.download {
+	width: 200px;
+
+	background-color: #0A0AFA;
+	color: #FAFAFA;
+	font-family: 'Ubuntu', sans-serif;
+
+	border: 2px solid #FAFAFA;
+	border-radius: 15px;
+
+	box-shadow: 0 0 25px 5px #FAFAFA;
+
+	transition: 0.2s all;
+}
+
+.download:hover {
+	background-color: #FAFAFA !important;
+	color: #1F1EFB !important;
+
+	border: 2px solid #FAFAFA !important;
+	border-radius: 15px !important;
+
+	outline: none !important;
+	box-shadow: none !important;
+}
+
+.download:focus,
+.download:active {
+	background-color: #0A0AFA !important;
+	color: #FAFAFA !important;
+
+	border: 2px solid #FAFAFA !important;
+	border-radius: 15px !important;
+
+	box-shadow: 0 0 25px 5px #FAFAFA !important;
+
+	outline: none !important;
+}
+
+/* - Footer - */
+.footer {
+	background-color: #1F1EFB;
+	border-top: 5px solid #0D2175;
+	height: 80px;
+	width: 100%;
+
+	margin-top: 50px;
+
+	display: flex;
+	justify-content: center;
+}
+
+.footer-list {
+	width: 1140px;
+
+	list-style: none;
+}
+
+.footer-list-element {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	text-align: center;
+}
+
+.footer-list-element a {
+	color: #FAFAFA;
+	font-size: 18px;
+	transition: 0.2s all;
+}
+
+.footer-list-element a:hover {
+	text-shadow: 0 0 10px #FAFAFA;
+	text-decoration: none;
+}

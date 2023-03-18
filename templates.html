@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Шаблоны | #Simple_WebTemplates</title>
+	<link rel="icon" href="favicon.ico">
+
+	<!--- Source Code Pro --->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;500&display=swap" rel="stylesheet">
+
+	<!--- Ubuntu --->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+
+	<!--- Bootstrap --->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+	<!--- AOS --->
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+	<!--- My Styles --->
+	<link rel="stylesheet" href="css/templates.css">
+</head>
+<body>
+	<header id="header" class="header">
+		<div class="header-nav">
+			<div class="title">
+				<a href="index.html">#Simple_WebTemplates</a>
+			</div>
+			<div class="top-nav">
+				<a class="nav-button" href="templates.html">Шаблоны</a>
+				<a class="nav-button" href="https://mydl.ru/">Державинский лицей</a>
+				<a class="nav-button" href="about.html">О нас</a>
+				<div class="dropdown">
+					<a class="btn btn-primary dropdown-toggle menu-button" href="javascript:void(0);" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+						МЕНЮ
+					</a>
+					<ul class="dropdown-menu">
+						<li><a class="dropdown-item" href="index.html">Главная</a></li>
+						<li><a class="dropdown-item" href="https://mydl.ru/" target="_blank">Державинский лицей</a></li>
+						<li><hr class="dropdown-divider"></li>
+						<li><a class="dropdown-item" href="about.html">О нас</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</header>
+	<main class="main">
+		<div class="wrapper">
+			<h1 class="page-caption">Шаблоны</h1>
+			<div class="card" data-aos="fade-out">
+				<img class="card-top" src="assets/templates/simple information.png" alt="">
+				<div class="card-middle">
+					<h2 class="card-label">Simple Information Site</h2>
+					Шаблон простенького информационного сайта с довольно приятным оформлением. Идельно подойдет для небольшой статьи, истории или какой-нибудь новости.<br>Можно настроить количество картинок и их расположение, а так же цвет сайта (синий, зеленый, красный и желтый).
+				</div>
+				<div class="card-bottom">
+					<a href="Templates/simple_information.html" class="edit-button">Перейти к редактированию!</a>
+				</div>
+			</div>
+			<div class="card" data-aos="fade-out">
+				<img class="card-top" src="assets/templates/minimalistic portfolio.png" alt="">
+				<div class="card-middle">
+					<h2 class="card-label">Minimalistic Portfolio</h2>
+					Простенький шаблон минималистичного одностраничного сайта портфолио. Подойдет почти под любую творческую (или не очень) профессию.<br>Можно настроить кол-во картинок и главный цвет сайта (разные градиенты).
+				</div>
+				<div class="card-bottom">
+					<a href="Templates/minimalistic_portfolio.html" class="edit-button">Перейти к редактированию!</a>
+				</div>
+			</div>
+			<div class="card" data-aos="fade-out">
+				<img class="card-top" src="assets/templates/simple information.png" alt="">
+				<div class="card-middle">
+					<h2 class="card-label">Coming Soon</h2>
+					Coming Soon
+				</div>
+				<div class="card-bottom">
+					<a href="#" class="edit-button">Перейти к редактированию!</a>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer class="footer">
+		<ul class="footer-list row">
+			<li class="footer-list-element col"><a href="#header">Наверх</a></li>
+			<li class="footer-list-element col"><a href="index.html">Главная</a></li>
+			<li class="footer-list-element col"><a href="https://mydl.ru/ " target="_blank">Державинский лицей</a></li>
+			<li class="footer-list-element col"><a href="about.html">О нас</a></li>
+		</ul>
+	</footer>
+
+	<!--- Bootstrap --->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+	<!--- AOS --->
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+	<!--- My script --->
+	<script src="js/aos_initialization.js"></script>
+</body>
+</html>
